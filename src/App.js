@@ -1,9 +1,11 @@
 import React from 'react'
+import {isDesktop} from 'react-device-detect'
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
     return (
+        !isDesktop ?
         <div className='App'>
             <header className='App-header'>
                 <img src={logo} className='App-logo' alt='logo' />
@@ -20,6 +22,7 @@ function App() {
                 </a>
             </header>
         </div>
+        :<>Desktop detected, не будешь работать</>
     )
 }
 
